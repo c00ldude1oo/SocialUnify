@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="@c00ldude1oo">
+  <title>SocialUnify</title>
+  <script type="text/javascript" src="scripts/remotestorage.js"></script>
+  <script>const ReSt = new RemoteStorage();</script>
+  
+ </head>
+	<body>
+		<h3>Facebook</h3>
+		<p>Hello</p>
+		<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '668408576961555',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v4.0'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  </script>
+		<script> FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+ </script>
+	</body>
+</html>
